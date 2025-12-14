@@ -10,3 +10,4 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=aak13-git_python-project-49&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=aak13-git_python-project-49)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=aak13-git_python-project-49&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=aak13-git_python-project-49)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=aak13-git_python-project-49&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=aak13-git_python-project-49)
+[![asciicast](https://asciinema.org/a/AudR9aFmLPvxvBcUg0SaO4zab.svg)](https://asciinema.org/a/AudR9aFmLPvxvBcUg0SaO4zab)
