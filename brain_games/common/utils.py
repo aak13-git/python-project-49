@@ -53,6 +53,41 @@ def result(answer: int, name: str, exp: int):
         )
 
 
+def random_num():
+    num_1, num_2 = random.randint(1, 100), random.randint(1, 100)
+    numbers = f'{num_1} {num_2}'
+    return numbers
+
+def quest_gcd(numbers):
+    print(f'Question: {numbers}')
+
+def calc_gcd(numbers):
+    num_1, num_2 = numbers.split(' ')
+    num_1, num_2 = int(num_1), int(num_2)
+    if num_1 > num_2:
+        alg = num_1 % num_2
+        while num_2 % alg != 0:
+            alg = num_2 % alg
+        return alg
+    elif num_1 < num_2:
+        alg = num_2 % num_1
+        while num_1 % alg != 0:
+            alg = num_1 % alg
+        return alg
+
+
+def comparison(answer: int, numbers: int, name: str):
+    if answer == calc_gcd(numbers):
+        print('Correct!')
+        return True
+    else:
+        print(
+            f"'{answer}' is wrong answer ;(. Correct answer was '{calc_gcd(numbers)}'\n"
+            f"Let's try again, {name}!"
+        )
+
+
+
 
 
 

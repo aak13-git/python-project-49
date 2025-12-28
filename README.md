@@ -12,3 +12,4 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=aak13-git_python-project-49&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=aak13-git_python-project-49)
 [![asciicast](https://asciinema.org/a/5NBzrSkqeiFAMlCPxZpjEmYP5.svg)](https://asciinema.org/a/5NBzrSkqeiFAMlCPxZpjEmYP5)
 [![asciicast](https://asciinema.org/a/IAX3CjIcrWWxvXTF0xamqnlB6.svg)](https://asciinema.org/a/IAX3CjIcrWWxvXTF0xamqnlB6)
+[![asciicast](https://asciinema.org/a/31U7ebMHXTPUQ22YOgjmpkXrw.svg)](https://asciinema.org/a/31U7ebMHXTPUQ22YOgjmpkXrw)
