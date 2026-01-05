@@ -1,4 +1,5 @@
 import random
+from math import sqrt
 
 
 def get_name():
@@ -110,7 +111,6 @@ def quest_progression(progression, rndm_value):
     print(f'Question: {prog}')
 
 
-
 def calc_progression(rndm_value: int, progression: list, name: str, answer: int):
     if answer == progression[rndm_value]:
         print('Correct!')
@@ -122,8 +122,39 @@ def calc_progression(rndm_value: int, progression: list, name: str, answer: int)
         )
 
 
+def random_simple():
+    numbers = random.randint(2, 3571)
+    print(f'Question: {numbers}')
+    return numbers
 
 
+def square_root(numbers):
+    root = int(sqrt(numbers))
+    return root
+
+
+def checking_prime(numbers, root):
+    flag = True
+    for num in range(2, root):
+        if numbers % num == 0:
+            flag = False
+    return flag
+
+
+def checking_answer(answer, flag, name):
+    if (answer == 'yes' and flag == True) or (answer == 'no' and flag == False):
+        print('Correct!')
+        return True
+    elif answer == 'yes' and flag == False:
+        print(
+            f"'{answer}' is wrong answer ;(. Correct answer was 'no'\n"
+            f"Let's try again, {name}!"
+        )
+    else:
+        print(
+            f"'{answer}' is wrong answer ;(. Correct answer was 'yes'\n"
+            f"Let's try again, {name}!"
+        )
 
 
 
