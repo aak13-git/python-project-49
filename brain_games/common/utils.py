@@ -87,6 +87,42 @@ def comparison(answer: int, numbers: int, name: str):
         )
 
 
+def arithmetic_sequence():
+    start = random.randint(1, 30)
+    step = random.randint(1, 10)
+    length = random.randint(5, 10)
+    progression = []
+    current_value = start
+    for _ in range(length):
+        progression.append(current_value)
+        current_value += step
+    return progression, length
+
+
+def value(length):
+    rndm_value = random.randint(1, length - 1)
+    return rndm_value
+
+
+def quest_progression(progression, rndm_value):
+    prog = progression.copy()
+    prog[rndm_value] = '..'
+    print(f'Question: {prog}')
+
+
+
+def calc_progression(rndm_value: int, progression: list, name: str, answer: int):
+    if answer == progression[rndm_value]:
+        print('Correct!')
+        return True
+    else:
+        print(
+            f"'{answer}' is wrong answer ;(. Correct answer was '{progression[rndm_value]}'\n"
+            f"Let's try again, {name}!"
+        )
+
+
+
 
 
 
