@@ -1,4 +1,12 @@
-from brain_games.common.utils import welcome, get_name, greet, exp_calc, quest_calc, result, calculation
+from brain_games.common.utils import (
+    calculation,
+    exp_calc,
+    get_name,
+    greet,
+    quest_calc,
+    result,
+    welcome,
+)
 
 
 def brain_calc():
@@ -19,8 +27,8 @@ def brain_calc():
         else:
             break
 
-
     if total == 3:
+
         print(f'Congratulations, {name}!')
 
 

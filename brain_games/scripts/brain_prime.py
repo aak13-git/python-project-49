@@ -1,5 +1,12 @@
-from brain_games.common.utils import welcome, get_name, greet, random_simple, square_root, checking_prime, \
-    checking_answer
+from brain_games.common.utils import (
+    checking_answer,
+    checking_prime,
+    get_name,
+    greet,
+    random_simple,
+    square_root,
+    welcome,
+)
 
 
 def brain_prime():
@@ -22,6 +29,7 @@ def brain_prime():
             break
 
     if total == 3:
+
         print(f'Congratulations, {name}!')
 
 

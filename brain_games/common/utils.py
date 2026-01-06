@@ -1,6 +1,15 @@
 import random
 from math import sqrt
 
+num_min = 1
+num_max = 100
+step_min_num = 1
+step_max_num = 10
+length_min = 5
+length_max = 10
+num_prime_min = 2
+num_prime_max = 3571
+
 
 def get_name():
     name = input('May I have your name? ')
@@ -16,15 +25,22 @@ def welcome():
 
 
 def num_even():
-    num = random.randint(1, 100)
+    num = random.randint(num_min, num_max)
+
     return num
 
 
-def quest_even(num)->str:
+def quest_even(num) -> str:
+
     print(f'Question: {num}')
 
+
 def exp_calc():
-    num_1, num_2 = random.randint(1, 20), random.randint(1, 20)
+
+    num_1, num_2 = (
+        random.randint(num_min, num_max),
+        random.randint(num_min, num_max)
+    )
     operators = ['+', '-', '*']
     random_operator = random.choice(operators)
     exp = f'{num_1} {random_operator} {num_2}'
@@ -32,15 +48,19 @@ def exp_calc():
 
 
 def quest_calc(exp):
+
     print(f'Question: {exp}')
 
 
 def calculation(exp):
     num_1, operator, num_2 = exp.split(' ')
     match operator:
-        case '+': return int(num_1) + int(num_2)
-        case '-': return int(num_1) - int(num_2)
-        case '*': return int(num_1) * int(num_2)
+        case '+':
+            return int(num_1) + int(num_2)
+        case '-':
+            return int(num_1) - int(num_2)
+        case '*':
+            return int(num_1) * int(num_2)
 
 
 def result(answer: int, name: str, exp: int):
@@ -49,20 +69,28 @@ def result(answer: int, name: str, exp: int):
         return True
     else:
         print(
-            f"'{answer}' is wrong answer ;(. Correct answer was '{calculation(exp)}'\n"
+            f"'{answer}' is wrong answer ;(. "
+            f"Correct answer was '{calculation(exp)}'\n"
             f"Let's try again, {name}!"
         )
 
 
 def random_num():
-    num_1, num_2 = random.randint(1, 100), random.randint(1, 100)
+    num_1, num_2 = (
+        random.randint(num_min, num_max),
+        random.randint(num_min, num_max)
+    )
     numbers = f'{num_1} {num_2}'
     return numbers
 
+
 def quest_gcd(numbers):
+
     print(f'Question: {numbers}')
 
+
 def calc_gcd(numbers):
+
     num_1, num_2 = numbers.split(' ')
     num_1, num_2 = int(num_1), int(num_2)
     if num_1 > num_2:
@@ -83,15 +111,16 @@ def comparison(answer: int, numbers: int, name: str):
         return True
     else:
         print(
-            f"'{answer}' is wrong answer ;(. Correct answer was '{calc_gcd(numbers)}'\n"
+            f"'{answer}' is wrong answer ;(. "
+            f"Correct answer was '{calc_gcd(numbers)}'\n"
             f"Let's try again, {name}!"
         )
 
 
 def arithmetic_sequence():
-    start = random.randint(1, 30)
-    step = random.randint(1, 10)
-    length = random.randint(5, 10)
+    start = random.randint(num_min, num_max)
+    step = random.randint(step_min_num, step_max_num)
+    length = random.randint(length_min, length_max)
     progression = []
     current_value = start
     for _ in range(length):
@@ -101,7 +130,7 @@ def arithmetic_sequence():
 
 
 def value(length):
-    rndm_value = random.randint(1, length - 1)
+    rndm_value = random.randint(length)
     return rndm_value
 
 
@@ -111,19 +140,20 @@ def quest_progression(progression, rndm_value):
     print(f'Question: {prog}')
 
 
-def calc_progression(rndm_value: int, progression: list, name: str, answer: int):
+def calc_progression(rndm_value, progression, name, answer):
     if answer == progression[rndm_value]:
         print('Correct!')
         return True
     else:
         print(
-            f"'{answer}' is wrong answer ;(. Correct answer was '{progression[rndm_value]}'\n"
+            f"'{answer}' is wrong answer ;(. "
+            f"Correct answer was '{progression[rndm_value]}'\n"
             f"Let's try again, {name}!"
         )
 
 
 def random_simple():
-    numbers = random.randint(2, 3571)
+    numbers = random.randint(num_prime_min, num_prime_max)
     print(f'Question: {numbers}')
     return numbers
 
@@ -142,10 +172,11 @@ def checking_prime(numbers, root):
 
 
 def checking_answer(answer, flag, name):
-    if (answer == 'yes' and flag == True) or (answer == 'no' and flag == False):
+    if (answer == 'yes' and flag) or (answer == 'no' and not flag):
+
         print('Correct!')
         return True
-    elif answer == 'yes' and flag == False:
+    elif answer == 'yes' and not flag:
         print(
             f"'{answer}' is wrong answer ;(. Correct answer was 'no'\n"
             f"Let's try again, {name}!"

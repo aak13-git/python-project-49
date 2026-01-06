@@ -1,5 +1,12 @@
-from brain_games.common.utils import welcome, get_name, greet, arithmetic_sequence, quest_progression, calc_progression, \
-    value
+from brain_games.common.utils import (
+    arithmetic_sequence,
+    calc_progression,
+    get_name,
+    greet,
+    quest_progression,
+    value,
+    welcome,
+)
 
 
 def brain_progression():

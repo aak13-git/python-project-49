@@ -1,4 +1,12 @@
-from brain_games.common.utils import welcome, get_name, greet, random_num, calc_gcd, comparison, quest_gcd
+from brain_games.common.utils import (
+    calc_gcd,
+    comparison,
+    get_name,
+    greet,
+    quest_gcd,
+    random_num,
+    welcome,
+)
 
 
 def brain_gcd():
@@ -20,6 +28,7 @@ def brain_gcd():
             break
 
     if total == 3:
+
         print(f'Congratulations, {name}!')
 
 

@@ -1,4 +1,10 @@
-from brain_games.common.utils import greet, get_name, welcome, num_even, quest_even
+from brain_games.common.utils import (
+    get_name,
+    greet,
+    num_even,
+    quest_even,
+    welcome,
+)
 
 
 def brain_even():
@@ -14,7 +20,11 @@ def brain_even():
         quest_even(num)
         answer = input('Your answer: ')
         if num % 2 != 0 and (answer == 'yes' or answer != 'no'):
-            print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'\nLet's try again, {name}!")
+            print(
+                f"'{answer}' is wrong answer ;(. "
+                f"Correct answer was 'no'\n"
+                f"Let's try again, {name}!"
+            )
             break
 
         elif (
@@ -22,16 +32,21 @@ def brain_even():
             and (answer == 'no' or answer != 'yes')
         ):
             print(
-                f"'{answer}' is wrong answer ;(. Correct answer was 'yes'\n"
+                f"'{answer}' is wrong answer ;(. "
+                f"Correct answer was 'yes'\n"
                 f"Let's try again, {name}!"
             )
             break
 
-        elif num % 2 == 0 and answer == 'yes' or num % 2 != 0 and answer == 'no':
+        elif (
+            num % 2 == 0 and answer == 'yes'
+            or num % 2 != 0 and answer == 'no'
+        ):
             print('Correct!')
             total += 1
             continue
     if total == 3:
+
         print(f'Congratulations, {name}!')
 
 
