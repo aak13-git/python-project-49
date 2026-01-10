@@ -12,6 +12,7 @@ LENGTH_MAX = 10
 NUM_PRIME_MIN = 2
 NUM_PRIME_MAX = 3571
 CORRECT_ANSWER = 'Correct!'
+PASS = '..'
 
 
 def get_name():
@@ -137,8 +138,8 @@ def value(length):
 
 def quest_progression(progression, rndm_value):
     prog = progression.copy()
-    prog[rndm_value] = '..'
-    print(f'Question: {prog}')
+    prog[rndm_value] = PASS
+    print(f'Question: {' '.join([str(i) for i in prog])}')
 
 
 def calc_progression(rndm_value, progression, name, answer):
