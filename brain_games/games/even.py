@@ -12,7 +12,7 @@ def brain_even():
     name = get_name()
     greet(name)
 
-    print('Answer "yes" if the number is even, otherwise answer "no"')
+    print('Answer "yes" if the number is even, otherwise answer "no".')
 
     total = 0
     for _ in range(3):
