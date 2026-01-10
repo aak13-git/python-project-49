@@ -3,6 +3,8 @@ from math import sqrt
 
 NUM_MIN = 1
 NUM_MAX = 100
+RANDOM_NUM_1 = random.randint(NUM_MIN, NUM_MAX)
+RANDOM_NUM_2 = random.randint(NUM_MIN, NUM_MAX)
 STEP_MIN_NUM = 1
 STEP_MAX_NUM = 10
 LENGTH_MIN = 5
@@ -26,7 +28,7 @@ def welcome():
 
 
 def num_even():
-    num = random.randint(NUM_MIN, NUM_MAX)
+    num = random.randint(NUM_MIN, NUM_MAX) #NOSONAR
 
     return num
 
@@ -41,9 +43,9 @@ def exp_calc():
     num_1, num_2 = (
         random.randint(NUM_MIN, NUM_MAX),
         random.randint(NUM_MIN, NUM_MAX)
-    )
+    ) #NOSONAR
     operators = ['+', '-', '*']
-    random_operator = random.choice(operators)
+    random_operator = random.choice(operators) #NOSONAR
     exp = f'{num_1} {random_operator} {num_2}'
     return exp
 
@@ -80,7 +82,7 @@ def random_num():
     num_1, num_2 = (
         random.randint(NUM_MIN, NUM_MAX),
         random.randint(NUM_MIN, NUM_MAX)
-    )
+    ) #NOSONAR
     numbers = f'{num_1} {num_2}'
     return numbers
 
@@ -119,9 +121,9 @@ def comparison(answer: int, numbers: int, name: str):
 
 
 def arithmetic_sequence():
-    start = random.randint(NUM_MIN, NUM_MAX)
-    step = random.randint(STEP_MIN_NUM, STEP_MAX_NUM)
-    length = random.randint(LENGTH_MIN, length_max)
+    start = random.randint(NUM_MIN, NUM_MAX) #NOSONAR
+    step = random.randint(STEP_MIN_NUM, STEP_MAX_NUM) #NOSONAR
+    length = random.randint(LENGTH_MIN, length_max) #NOSONAR
     progression = []
     current_value = start
     for _ in range(length):
@@ -131,7 +133,7 @@ def arithmetic_sequence():
 
 
 def value(length):
-    rndm_value = random.randint(length)
+    rndm_value = random.randint(length) #NOSONAR
     return rndm_value
 
 
@@ -154,7 +156,7 @@ def calc_progression(rndm_value, progression, name, answer):
 
 
 def random_simple():
-    numbers = random.randint(NUM_PRIME_MIN, NUM_PRIME_MAX)
+    numbers = random.randint(NUM_PRIME_MIN, NUM_PRIME_MAX) #NOSONAR
     print(f'Question: {numbers}')
     return numbers
 
