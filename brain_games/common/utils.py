@@ -3,8 +3,8 @@ from math import sqrt
 
 NUM_MIN = 1
 NUM_MAX = 100
-RANDOM_NUM_1 = random.randint(NUM_MIN, NUM_MAX) #NOSONAR
-RANDOM_NUM_2 = random.randint(NUM_MIN, NUM_MAX) #NOSONAR
+RANDOM_NUM_1 = random.randint(NUM_MIN, NUM_MAX)  # NOSONAR
+RANDOM_NUM_2 = random.randint(NUM_MIN, NUM_MAX)  # NOSONAR
 STEP_MIN_NUM = 1
 STEP_MAX_NUM = 10
 LENGTH_MIN = 5
@@ -28,7 +28,7 @@ def welcome():
 
 
 def num_even():
-    num = random.randint(NUM_MIN, NUM_MAX) #NOSONAR
+    num = random.randint(NUM_MIN, NUM_MAX)  # NOSONAR
 
     return num
 
@@ -41,11 +41,11 @@ def quest_even(num) -> str:
 def exp_calc():
 
     num_1, num_2 = (
-        random.randint(NUM_MIN, NUM_MAX), #NOSONAR
-        random.randint(NUM_MIN, NUM_MAX) #NOSONAR
+        random.randint(NUM_MIN, NUM_MAX),  # NOSONAR
+        random.randint(NUM_MIN, NUM_MAX)  # NOSONAR
     )
     operators = ['+', '-', '*']
-    random_operator = random.choice(operators) #NOSONAR
+    random_operator = random.choice(operators)  # NOSONAR
     exp = f'{num_1} {random_operator} {num_2}'
     return exp
 
@@ -80,8 +80,8 @@ def result(answer: int, name: str, exp: int):
 
 def random_num():
     num_1, num_2 = (
-        random.randint(NUM_MIN, NUM_MAX), #NOSONAR
-        random.randint(NUM_MIN, NUM_MAX) #NOSONAR
+        random.randint(NUM_MIN, NUM_MAX),  # NOSONAR
+        random.randint(NUM_MIN, NUM_MAX)  # NOSONAR
     )
     numbers = f'{num_1} {num_2}'
     return numbers
@@ -96,16 +96,14 @@ def calc_gcd(numbers):
 
     num_1, num_2 = numbers.split(' ')
     num_1, num_2 = int(num_1), int(num_2)
-    if num_1 > num_2:
-        alg = num_1 % num_2
-        while num_2 % alg != 0:
-            alg = num_2 % alg
-        return alg
-    elif num_1 < num_2:
-        alg = num_2 % num_1
-        while num_1 % alg != 0:
-            alg = num_1 % alg
-        return alg
+    if num_2 == 0:
+        return num_1
+    elif num_2 != 0:
+        while num_2 != 0:
+            temp = num_2
+            num_2 = num_1 % num_2
+            num_1 = temp
+        return temp
 
 
 def comparison(answer: int, numbers: int, name: str):
@@ -121,9 +119,9 @@ def comparison(answer: int, numbers: int, name: str):
 
 
 def arithmetic_sequence():
-    start = random.randint(NUM_MIN, NUM_MAX) #NOSONAR
-    step = random.randint(STEP_MIN_NUM, STEP_MAX_NUM) #NOSONAR
-    length = random.randint(LENGTH_MIN, length_max) #NOSONAR
+    start = random.randint(NUM_MIN, NUM_MAX)  # NOSONAR
+    step = random.randint(STEP_MIN_NUM, STEP_MAX_NUM)  # NOSONAR
+    length = random.randint(LENGTH_MIN, LENGTH_MAX)  # NOSONAR
     progression = []
     current_value = start
     for _ in range(length):
@@ -133,7 +131,7 @@ def arithmetic_sequence():
 
 
 def value(length):
-    rndm_value = random.randint(length) #NOSONAR
+    rndm_value = random.randint(length)  # NOSONAR
     return rndm_value
 
 
@@ -156,7 +154,7 @@ def calc_progression(rndm_value, progression, name, answer):
 
 
 def random_simple():
-    numbers = random.randint(NUM_PRIME_MIN, NUM_PRIME_MAX) #NOSONAR
+    numbers = random.randint(NUM_PRIME_MIN, NUM_PRIME_MAX)  # NOSONAR
     print(f'Question: {numbers}')
     return numbers
 
