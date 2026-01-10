@@ -3,8 +3,8 @@ from math import sqrt
 
 NUM_MIN = 1
 NUM_MAX = 100
-RANDOM_NUM_1 = random.randint(NUM_MIN, NUM_MAX)
-RANDOM_NUM_2 = random.randint(NUM_MIN, NUM_MAX)
+RANDOM_NUM_1 = random.randint(NUM_MIN, NUM_MAX) #NOSONAR
+RANDOM_NUM_2 = random.randint(NUM_MIN, NUM_MAX) #NOSONAR
 STEP_MIN_NUM = 1
 STEP_MAX_NUM = 10
 LENGTH_MIN = 5
@@ -41,9 +41,9 @@ def quest_even(num) -> str:
 def exp_calc():
 
     num_1, num_2 = (
-        random.randint(NUM_MIN, NUM_MAX),
-        random.randint(NUM_MIN, NUM_MAX)
-    ) #NOSONAR
+        random.randint(NUM_MIN, NUM_MAX), #NOSONAR
+        random.randint(NUM_MIN, NUM_MAX) #NOSONAR
+    )
     operators = ['+', '-', '*']
     random_operator = random.choice(operators) #NOSONAR
     exp = f'{num_1} {random_operator} {num_2}'
@@ -80,9 +80,9 @@ def result(answer: int, name: str, exp: int):
 
 def random_num():
     num_1, num_2 = (
-        random.randint(NUM_MIN, NUM_MAX),
-        random.randint(NUM_MIN, NUM_MAX)
-    ) #NOSONAR
+        random.randint(NUM_MIN, NUM_MAX), #NOSONAR
+        random.randint(NUM_MIN, NUM_MAX) #NOSONAR
+    )
     numbers = f'{num_1} {num_2}'
     return numbers
 
