@@ -1,8 +1,8 @@
 import random
 from math import sqrt
 
-num_min = 1
-num_max = 100
+NUM_MIN = 1
+NUM_MAX = 100
 step_min_num = 1
 step_max_num = 10
 length_min = 5
@@ -25,7 +25,7 @@ def welcome():
 
 
 def num_even():
-    num = random.randint(num_min, num_max)
+    num = random.randint(NUM_MIN, NUM_MAX)
 
     return num
 
@@ -38,8 +38,8 @@ def quest_even(num) -> str:
 def exp_calc():
 
     num_1, num_2 = (
-        random.randint(num_min, num_max),
-        random.randint(num_min, num_max)
+        random.randint(NUM_MIN, NUM_MAX),
+        random.randint(NUM_MIN, NUM_MAX)
     )
     operators = ['+', '-', '*']
     random_operator = random.choice(operators)
@@ -77,8 +77,8 @@ def result(answer: int, name: str, exp: int):
 
 def random_num():
     num_1, num_2 = (
-        random.randint(num_min, num_max),
-        random.randint(num_min, num_max)
+        random.randint(NUM_MIN, NUM_MAX),
+        random.randint(NUM_MIN, NUM_MAX)
     )
     numbers = f'{num_1} {num_2}'
     return numbers
@@ -118,7 +118,7 @@ def comparison(answer: int, numbers: int, name: str):
 
 
 def arithmetic_sequence():
-    start = random.randint(num_min, num_max)
+    start = random.randint(NUM_MIN, NUM_MAX)
     step = random.randint(step_min_num, step_max_num)
     length = random.randint(length_min, length_max)
     progression = []
