@@ -17,7 +17,7 @@ def brain_gcd():
     print('Find the greatest common divisor of given numbers.')
 
     total = 0
-    for quest in range(3):
+    for _ in range(3):
         numbers = random_num()
         calc_gcd(numbers)
         quest_gcd(numbers)

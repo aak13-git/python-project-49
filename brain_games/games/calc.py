@@ -17,7 +17,7 @@ def brain_calc():
     print('What is the result of the expression?')
 
     total = 0
-    for quest in range(3):
+    for _ in range(3):
         exp = exp_calc()
         quest_calc(exp)
         answer = int(input('Your answer: '))

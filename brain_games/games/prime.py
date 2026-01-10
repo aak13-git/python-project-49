@@ -18,7 +18,7 @@ def brain_prime():
 
     total = 0
 
-    for quest in range(3):
+    for _ in range(3):
         numbers = random_simple()
         root = square_root(numbers)
         answer = input('Your answer: ')

@@ -3,12 +3,13 @@ from math import sqrt
 
 NUM_MIN = 1
 NUM_MAX = 100
-step_min_num = 1
-step_max_num = 10
-length_min = 5
-length_max = 10
-num_prime_min = 2
-num_prime_max = 3571
+STEP_MIN_NUM = 1
+STEP_MAX_NUM = 10
+LENGTH_MIN = 5
+LENGTH_MAX = 10
+NUM_PRIME_MIN = 2
+NUM_PRIME_MAX = 3571
+CORRECT_ANSWER = 'Correct!'
 
 
 def get_name():
@@ -65,7 +66,7 @@ def calculation(exp):
 
 def result(answer: int, name: str, exp: int):
     if answer == calculation(exp):
-        print('Correct!')
+        print(CORRECT_ANSWER)
         return True
     else:
         print(
@@ -107,7 +108,7 @@ def calc_gcd(numbers):
 
 def comparison(answer: int, numbers: int, name: str):
     if answer == calc_gcd(numbers):
-        print('Correct!')
+        print(CORRECT_ANSWER)
         return True
     else:
         print(
@@ -119,8 +120,8 @@ def comparison(answer: int, numbers: int, name: str):
 
 def arithmetic_sequence():
     start = random.randint(NUM_MIN, NUM_MAX)
-    step = random.randint(step_min_num, step_max_num)
-    length = random.randint(length_min, length_max)
+    step = random.randint(STEP_MIN_NUM, STEP_MAX_NUM)
+    length = random.randint(LENGTH_MIN, length_max)
     progression = []
     current_value = start
     for _ in range(length):
@@ -142,7 +143,7 @@ def quest_progression(progression, rndm_value):
 
 def calc_progression(rndm_value, progression, name, answer):
     if answer == progression[rndm_value]:
-        print('Correct!')
+        print(CORRECT_ANSWER)
         return True
     else:
         print(
@@ -153,7 +154,7 @@ def calc_progression(rndm_value, progression, name, answer):
 
 
 def random_simple():
-    numbers = random.randint(num_prime_min, num_prime_max)
+    numbers = random.randint(NUM_PRIME_MIN, NUM_PRIME_MAX)
     print(f'Question: {numbers}')
     return numbers
 
@@ -174,7 +175,7 @@ def checking_prime(numbers, root):
 def checking_answer(answer, flag, name):
     if (answer == 'yes' and flag) or (answer == 'no' and not flag):
 
-        print('Correct!')
+        print(CORRECT_ANSWER)
         return True
     elif answer == 'yes' and not flag:
         print(

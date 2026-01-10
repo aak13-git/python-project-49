@@ -17,7 +17,7 @@ def brain_progression():
     print('What number is missing in the progression?')
 
     total = 0
-    for quest in range(3):
+    for _ in range(3):
         progression, length = arithmetic_sequence()
         rndm_value = value(length)
         quest_progression(progression, rndm_value)

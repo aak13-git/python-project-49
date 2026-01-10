@@ -15,7 +15,7 @@ def brain_even():
     print('Answer "yes" if the number is even, otherwise answer "no"')
 
     total = 0
-    for quest in range(3):
+    for _ in range(3):
         num = num_even()
         quest_even(num)
         answer = input('Your answer: ')
@@ -44,7 +44,6 @@ def brain_even():
         ):
             print('Correct!')
             total += 1
-            continue
     if total == 3:
 
         print(f'Congratulations, {name}!')
