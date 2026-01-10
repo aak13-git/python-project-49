@@ -131,7 +131,7 @@ def arithmetic_sequence():
 
 
 def value(length):
-    rndm_value = random.randint(length)  # NOSONAR
+    rndm_value = random.randint(NUM_MIN, length)  # NOSONAR
     return rndm_value
 
 
